@@ -1,0 +1,55 @@
+@{
+    Layout = "_LayoutLogin";
+    ViewData["Title"] = "Login";
+}
+
+<div id="login-card" class="card">
+
+    <div class="card-header bg-dark text-light">
+        <h1 class="my-0 text-center">Log<span>In</span></h1>
+    </div>
+
+    <div class="card-body">
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div id="login-alert" class="alert alert-danger shadow-md" role="alert">
+                <button type="button" class="btn btn-sm btn-danger close-alert" data-dismiss="modal" aria-label="Close">
+                    <span class="close-span" aria-hidden="true">&times;</span>
+                </button>
+                @TempData["ErrorMessage"]
+            </div>
+        }
+
+        <form id="login-form" asp-controller="" asp-action="" method="post">
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-dark text-light"><i class="bi bi-person-circle"></i></span>
+                <label for="login-name" hidden>Login:</label>
+                <input type="text" class="form-control" name="login-name" id="login-name" placeholder="Nome de usuário ..." autocomplete="username">
+
+            </div>
+
+            <div class="input-group">
+
+                <span class="input-group-text bg-dark text-light"><i class="bi bi-lock-fill"></i></span>
+                <label for="login-password" hidden>Senha:</label>
+                <input type="password" class="form-control" name="login-password" id="login-password" placeholder="Insira sua senha ..." autocomplete="current-password">
+
+                <a title="Exibir Senha" class="input-group-text" id="toggle-password"><i title="Exibir Senha" id="password-icon" class="bi bi-eye-slash-fill"></i></a>
+
+            </div>
+
+            <div id="login-btn-container" class="d-grid m-auto">
+                <button id="login-btn" type="submit" class="btn bg-dark btn-block text-light"><i id="enter" class="bi bi-door-open-fill me-2"></i> Entrar</button>
+            </div>
+
+
+            <p class="text-center text-light">Não consegue fazer login? <a href="">Alterar senha.</a> </p>
+
+        </form>
+
+    </div>
+
+</div>
