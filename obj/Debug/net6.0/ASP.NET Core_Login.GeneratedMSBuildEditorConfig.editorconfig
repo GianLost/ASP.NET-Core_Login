@@ -8,37 +8,37 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ASP.NET_Core_Login
 build_property.RootNamespace = ASP.NET_Core_Login
-build_property.ProjectDir = C:\Users\Administrador\Desktop\ASP.NET Core_Login\
+build_property.ProjectDir = C:\Users\gianluca.vialli\Desktop\ASP.NET Core_Login\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Administrador\Desktop\ASP.NET Core_Login
+build_property.MSBuildProjectDirectory = C:\Users\gianluca.vialli\Desktop\ASP.NET Core_Login
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/Home/Index.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/Login/Index.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/Shared/_Layout.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/Shared/_LayoutLogin.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/Shared/_LayoutLogin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/_ViewImports.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Administrador/Desktop/ASP.NET Core_Login/Views/_ViewStart.cshtml]
+[C:/Users/gianluca.vialli/Desktop/ASP.NET Core_Login/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

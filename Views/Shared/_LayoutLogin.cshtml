@@ -13,23 +13,29 @@
         <!-- Bootstrap Icons -->
         <link rel="stylesheet" href="/lib/bootstrap-icons/font/bootstrap-icons.min.css" asp-append-version="true" />
 
+        <!-- Bootstrap min.css -->
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+
+        <!-- Custom css -->
         <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
         <link rel="stylesheet" href="~/css/login-page.css" asp-append-version="true" />
     </head>
 
     <body id="login-body">
 
-        <div id="login-container">
-            @RenderBody()
-        </div>
+        @RenderBody()
 
+        <!-- JQuery min.js -->
         <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+
+        <!-- Bootstrap bundle.min.js -->
         <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
+
+        <!-- Custom js -->
+        <script type="module" src="~/js/PasswordVisibility/passwordToggleFunction.js" asp-append-version="true"></script>
 
         @await RenderSectionAsync("Scripts", required: false)
 
     </body>
-
+    
 </html>
