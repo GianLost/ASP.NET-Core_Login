@@ -15,9 +15,4 @@ public class HomeController : Controller
     {
         return View();
     }
-
-    public IActionResult _LayoutLogin()
-    {
-        return Redirect("~/Shared/_LayoutLogin");
-    }
 }
