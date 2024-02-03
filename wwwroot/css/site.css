@@ -22,6 +22,12 @@ body {
   color: var(--light-color);
 }
 
+.main-body {
+  width: 100%;
+  height: 100%;
+  margin-top: 4rem;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -40,8 +46,6 @@ a {
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: var(--light-color);
-  background-color: var(--primary-color);
-  border-color: var(--primary-border-color);
 }
 
 .border-top {
@@ -61,8 +65,14 @@ button.accept-policy {
 }
 
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 20px;
+  height: 4.5rem;
+  text-align: center;
   white-space: nowrap;
   color: var(--light-color);
 }

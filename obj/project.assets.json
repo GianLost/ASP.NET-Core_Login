@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\gianluca.vialli\\.nuget\\packages\\": {}
+    "C:\\Users\\Administrador\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET Core_Login\\ASP.NET Core_Login.csproj",
+      "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\ASP.NET Core_Login\\ASP.NET Core_Login.csproj",
       "projectName": "ASP.NET Core_Login",
-      "projectPath": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET Core_Login\\ASP.NET Core_Login.csproj",
-      "packagesPath": "C:\\Users\\gianluca.vialli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET Core_Login\\obj\\",
+      "projectPath": "C:\\Users\\Administrador\\Desktop\\ASP.NET Core_Login\\ASP.NET Core_Login.csproj",
+      "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrador\\Desktop\\ASP.NET Core_Login\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gianluca.vialli\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.417\\RuntimeIdentifierGraph.json"
       }
     }
   }
