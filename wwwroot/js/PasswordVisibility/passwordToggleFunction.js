@@ -1,4 +1,4 @@
-﻿import { loginPasswordInput, loginTogglePasswordButton, loginPasswordIcon } from "./constantsComponent.js";
+﻿import { loginPasswordInput, loginTogglePasswordButton, loginPasswordIcon } from "../Constants/constantsComponent.js";
 
 /**
  * "function togglePasswordVisibility()" é a função responsável por alterar a visibilidade dos campos de senha nos formulários em que é aplicada.

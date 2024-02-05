@@ -69,6 +69,24 @@
     transition: ease-out var(--button-hover-transition-speed);
 }
 
+.dropdown ul{
+    width: 15rem;
+    background-color: var(--navlinks-color);
+}
+
+.dropdown .dropdown-menu {
+    margin-top: 1rem;
+}
+
+.dropdown li {
+    margin: auto;
+    width: 100%;
+}
+
+.dropdown li a:hover {
+    background-color: var(--purple-hover-color);
+}
+
 @media (max-width: 580px) {
 
     #menu .navbar-nav {
@@ -90,5 +108,10 @@
         padding: 1vh;
         border-radius: 1vh;
         border: none;
+    }
+
+    .dropdown ul{
+        width: 100%;
+        margin: 0rem 0rem 0rem 1rem;
     }
 }
