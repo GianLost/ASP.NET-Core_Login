@@ -42,7 +42,7 @@
                             <a title="usuários ..." class="nav-link dropdown-toggle" id="menu-users" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i title="usuários ..." class="bi bi-person-fill-add"></i> Usuários</a>
                             <ul class="dropdown-menu" aria-labelledby="menu-users">
 
-                                <li> <a class="dropdown-item" asp-controller="" asp-action="">Administradores</a> </li>
+                                <li> <a class="dropdown-item" asp-controller="Users" asp-action="Register">Administradores</a> </li>
                                 <li> <hr class="dropdown-divider"> </li>
 
                                 <li> <a class="dropdown-item" asp-controller="" asp-action="">Clientes</a> </li>
@@ -99,7 +99,7 @@
 
     <!-- Custom js -->
     <script src="~/js/site.js" asp-append-version="true" asp-append-version="true"></script>
-    <script src="~/js/Animation/door.js" asp-append-version="true" asp-append-version="true"></script>
+    <script type="module" src="~/js/Animation/door.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)
 

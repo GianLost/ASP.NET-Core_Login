@@ -1,0 +1,88 @@
+@using ASP.NET_Core_Login.Models;
+
+@model Users
+
+@{
+    ViewData["Title"] = "Cadastro de usuário";
+}
+
+<div id="user-register-container" class="container-fluid col-md-8">
+
+    <div class="person">
+        <div class="line"></div>
+        <i class="bi bi-person-circle"></i>
+        <div class="line"></div>
+    </div>
+
+    <form class="row" asp-controller="" asp-action="" method="post">
+
+        @*await Html.PartialAsync("../Shared/Components/Alerts/_Alerts.cshtml")*@
+
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label class="form-label" for="user-name" hidden></label>
+                <input type="text" class="form-control" id="user-name" name="Name" placeholder="Nome completo" maxlength="50" minlength="10" asp-for="Name" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-login" hidden></label>
+                <input type="text" class="form-control" id="user-login" name="login" placeholder="Nome de login" maxlength="35" minlength="10" asp-for="Login" autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-email" hidden></label>
+                <input type="text" class="form-control" id="user-email" name="email" placeholder="Informe seu e-mail" asp-for="Email" autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-cellphone" hidden></label>
+                <input type="tel" class="form-control" id="user-cellphone" name="phone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel">
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+
+            <div class="form-group">
+                <label class="form-label" for="user-workplace" hidden></label>
+                <input type="text" class="form-control" id="user-workplace" name="workplace" placeholder="Local de trabalho" asp-for="Workplace" autocomplete="organization">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-Position" hidden></label>
+                <input type="text" class="form-control" id="user-Position" name="Position" placeholder="Seu cargo" maxlength="35" minlength="9" asp-for="Position" autocomplete="organization-title">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-Password" hidden></label>
+                <input type="password" class="form-control" id="user-Password" name="password" placeholder="Informe uma senha" maxlength="100" asp-for="Password" autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label" for="user-confPass" hidden></label>
+                <input type="password" class="form-control" id="user-confPass" name="confirmPass" placeholder="Confirme sua senha" maxlength="100" autocomplete="new-password">
+            </div>
+
+        </div>
+
+        <div class="col-md-12">
+            <div class="form-group">
+                <label class="form-label" for="userType" hidden></label>
+                <select class="form-control" name="user-type" id="userType" asp-for="UserType">
+                    <option value="">-- selecione o nível do usuário --</option>
+                    <option value="1">Administrador</option>
+                    <option value="2">Cliente</option>
+                    <option value="0">Visitante</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button title="Cadastrar usuário ..." type="submit" class="btn btn-primary"><i class="bi bi-person-add" title="Cadastrar usuário ..."></i> Salvar</button>
+            <button asp-controller="" asp-action="" type="submit" class="btn btn-secondary" title="Cancelar cadastro ..."><i class="bi bi-arrow-return-left" title="Cancelar cadastro ..."></i></button>
+        </div>
+
+    </form>
+
+</div>

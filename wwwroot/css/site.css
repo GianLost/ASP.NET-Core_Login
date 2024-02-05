@@ -77,6 +77,27 @@ button.accept-policy {
   color: var(--light-color);
 }
 
+#user-register-container {
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;  
+  margin: 6rem auto;
+}
+
+.person i{
+  font-size: 6rem;
+}
+
+#user-register-container form {
+  height: 100%;
+}
+
+#user-register-container .form-group {
+  margin: 1rem auto;
+}
+
 @media (min-width: 600px), (max-width: 1800px) {
   html {
     font-size: 0.8em;
