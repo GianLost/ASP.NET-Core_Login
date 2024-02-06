@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET_Core_Login.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    [Migration("20240206200655_Login_Migration-01")]
+    [Migration("20240206203705_Login_Migration-01")]
     partial class Login_Migration01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

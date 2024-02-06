@@ -1,24 +1,17 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace ASP.NET_Core_Login.Controllers
+namespace ASP.NET_Core_Login.Controllers;
+public class UsersController : Controller
 {
-    public class UsersController : Controller
+    private readonly ILogger<UsersController> _logger;
+
+    public UsersController(ILogger<UsersController> logger)
     {
-        private readonly ILogger<UsersController> _logger;
-
-        public UsersController(ILogger<UsersController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public IActionResult Register()
-        {
-            return View();
-        }
+        _logger = logger;
     }
+
+    public IActionResult Index() => View();
+
+    public IActionResult Register() => View();
+
 }

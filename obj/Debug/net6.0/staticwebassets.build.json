@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Yv/SOBY9rQz9wCbVlVpg2uBlOklnoBu8KXhfPqaQw3M=",
+  "Hash": "fIC0omFts1JWLnL8PKxW8tbgUn/Cz5sAlKbWr7VWbP4=",
   "Source": "ASP.NET Core_Login",
   "BasePath": "_content/ASP.NET Core_Login",
   "Mode": "Default",
@@ -136,6 +136,23 @@
       "OriginalItemSpec": "wwwroot\\js\\Animation\\door.js"
     },
     {
+      "Identity": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\Animation\\togglePasswordVisibility.js",
+      "SourceId": "ASP.NET Core_Login",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
+      "BasePath": "_content/ASP.NET Core_Login",
+      "RelativePath": "js/Animation/togglePasswordVisibility.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Animation\\togglePasswordVisibility.js"
+    },
+    {
       "Identity": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\Constants\\constantsComponent.js",
       "SourceId": "ASP.NET Core_Login",
       "SourceType": "Discovered",
@@ -151,23 +168,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Constants\\constantsComponent.js"
-    },
-    {
-      "Identity": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\PasswordVisibility\\passwordToggleFunction.js",
-      "SourceId": "ASP.NET Core_Login",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
-      "BasePath": "_content/ASP.NET Core_Login",
-      "RelativePath": "js/PasswordVisibility/passwordToggleFunction.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\PasswordVisibility\\passwordToggleFunction.js"
     },
     {
       "Identity": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\site.js",

@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 using ASP.NET_Core_Login.Models;
 
 namespace ASP.NET_Core_Login.Database;
@@ -11,7 +10,7 @@ public class LoginContext : DbContext
 
     }
 
-    public DbSet<Users>? Users { get; set; }
+    public DbSet<Users>? Users => Set<Users>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
