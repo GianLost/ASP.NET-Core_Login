@@ -58,13 +58,11 @@
     text-align: center;
     background-color: var(--navlinks-color);
     margin-bottom: -1rem;
-    border: 1px solid var(--light-navlink-border);
     border-radius: 1vh 1vh 0vh 0vh;
 }
 
 #menu .nav-link:hover {
-    background-color: var(--purple-hover-color);
-    border: 1px solid var(--light-color);
+    background-color: var(--purple-color);
     border-bottom: 0px;
     transition: ease-out var(--button-hover-transition-speed);
 }
@@ -84,7 +82,7 @@
 }
 
 .dropdown li a:hover {
-    background-color: var(--purple-hover-color);
+    background-color: var(--purple-color);
 }
 
 @media (max-width: 580px) {

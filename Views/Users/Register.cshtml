@@ -6,12 +6,10 @@
     ViewData["Title"] = "Cadastro de usuário";
 }
 
-<div id="user-register-container" class="container-fluid col-md-8">
+<div id="user-register-container" class="col-md-8">
 
     <div class="person">
-        <div class="line"></div>
-        <i class="bi bi-person-circle"></i>
-        <div class="line"></div>
+        <h1><i class="bi bi-person-circle me-4"></i>Cadastro de usuário</h1>
     </div>
 
     <form class="row" asp-controller="" asp-action="" method="post">
@@ -67,18 +65,16 @@
         </div>
 
         <div class="col-md-12">
-            <div class="form-group">
-                <label class="form-label" for="userType" hidden></label>
-                <select class="form-control" name="user-type" id="userType" asp-for="UserType">
-                    <option value="">-- selecione o nível do usuário --</option>
-                    <option value="1">Administrador</option>
-                    <option value="2">Cliente</option>
-                    <option value="0">Visitante</option>
-                </select>
-            </div>
+            <label class="form-label" for="userType" hidden></label>
+            <select class="form-control" name="user-type" id="userType" asp-for="UserType">
+                <option value="">-- selecione o nível do usuário --</option>
+                <option value="1">Administrador</option>
+                <option value="2">Cliente</option>
+                <option value="0">Visitante</option>
+            </select>
         </div>
 
-        <div class="form-group">
+        <div class="btn-user-register">
             <button title="Cadastrar usuário ..." type="submit" class="btn btn-primary me-3"><i class="bi bi-person-add" title="Cadastrar usuário ..."></i> Salvar</button>
             <button asp-controller="" asp-action="" type="submit" class="btn btn-secondary" title="Cancelar cadastro ..."><i class="bi bi-arrow-return-left" title="Cancelar cadastro ..."></i></button>
         </div>

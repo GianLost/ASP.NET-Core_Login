@@ -31,7 +31,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 85vh;
+  height: 80vh;
   margin-bottom: 2vh;
 }
 
@@ -47,8 +47,14 @@ a {
 
 .btn-primary {
   color: var(--light-color);
-  background-color: var(--primary-color);
-  border-color: var(--primary-border-color);
+  background-color: var(--purple-color);
+  border-color: var(--purple-color);
+}
+
+.btn-primary:hover {
+  color: var(--light-color);
+  background-color: var(--purple-color);
+  border-color: var(--purple-color);
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
@@ -86,7 +92,7 @@ button.accept-policy {
 }
 
 #user-register-container {
-  height: 45rem;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -94,24 +100,45 @@ button.accept-policy {
   margin: 6rem auto;
 }
 
+.person {
+  width: 100%;
+}
+
+.person h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .person i{
-  font-size: 6rem;
+  font-size: 3rem;
 }
 
 #user-register-container form {
-  margin-bottom: 1rem;
-  height: 100%;
+  height: 70%;
 }
 
 #user-register-container .form-group {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   margin: 1.8rem auto;
+}
+
+.btn-user-register {
+  display: flex;
+  align-items: center;
 }
 
 @media (min-width: 600px), (max-width: 1800px) {
   html {
     font-size: 0.8em;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    bottom: -15rem;
+  }
+
+  .btn-user-register button{
+    margin-top: 2vh;
   }
 }

@@ -8,23 +8,21 @@
 }
 
 #login-body {
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  padding: 2vh;
 }
 
 .login-card {
   width: 42rem;
-  height: 38rem;
+  height: 35rem;
   box-shadow: 1px 1px 80px #ffffff8e;
   background-color: var(--main-bg-color);
   border-radius: 2vh;
 }
 
 .login-card .card-header {
+  border-radius: 2vh 2vh 0vh 0vh;
   border-bottom: 0.5rem solid var(--purple-color);
 }
 
@@ -37,8 +35,6 @@
 }
 
 #login-form {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -51,7 +47,8 @@
 }
 
 #login-form .input-group {
-  margin: 4rem auto auto;
+  margin: 3rem auto 1rem auto;
+  width: 33rem;
 }
 
 #login-form input {
@@ -72,12 +69,11 @@
 }
 
 #login-btn-container {
-  margin: 5rem auto;
+  margin: 3rem auto;
 }
 
 #login-btn-container p {
   margin: 3rem -1rem;
-  padding: 0%;
 }
 
 #login-btn-container button:hover {
