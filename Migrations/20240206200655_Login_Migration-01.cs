@@ -40,9 +40,7 @@ namespace ASP.NET_Core_Login.Migrations
                     LastModifiedBy = table.Column<string>(type: "varchar(35)", maxLength: 35, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     UserType = table.Column<int>(type: "int", nullable: false),
-                    UserStats = table.Column<int>(type: "int", nullable: false),
-                    Discriminator = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    UserStats = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {

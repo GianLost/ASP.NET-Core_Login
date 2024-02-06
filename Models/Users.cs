@@ -4,7 +4,8 @@ using ASP.NET_Core_Login.Keys;
 
 namespace ASP.NET_Core_Login.Models;
 
-public abstract class Users
+[Table("Users")]
+public class Users
 {
     [Key, Required(ErrorMessage = "O campo id é obrigatório !")]
     public int Id { get; set; }

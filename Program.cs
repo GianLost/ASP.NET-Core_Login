@@ -1,4 +1,5 @@
 using ASP.NET_Core_Login.Database;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +18,14 @@ builder.Services.AddSession(x =>
 
 builder.Services.AddMvc();
 
-builder.Services.AddDbContext<LoginContext>();
+builder.Services.AddDbContext<LoginContext>(options => {
+
+    string? connectionString = Environment.GetEnvironmentVariable("SIS_LOGIN_CONNECTION_STRING") ?? throw new InvalidOperationException("A string de conexão com o banco de dados não foi encontrada");
+
+    ServerVersion serverVersion = ServerVersion.AutoDetect(connectionString);
+    
+    options.UseMySql(connectionString, serverVersion);
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

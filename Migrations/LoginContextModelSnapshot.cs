@@ -30,10 +30,6 @@ namespace ASP.NET_Core_Login.Migrations
                         .HasMaxLength(15)
                         .HasColumnType("varchar(15)");
 
-                    b.Property<string>("Discriminator")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -109,35 +105,6 @@ namespace ASP.NET_Core_Login.Migrations
                         .IsUnique();
 
                     b.ToTable("Users");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Users");
-                });
-
-            modelBuilder.Entity("ASP.NET_Core_Login.Models.Administrator", b =>
-                {
-                    b.HasBaseType("ASP.NET_Core_Login.Models.Users");
-
-                    b.ToTable("Users", (string)null);
-
-                    b.HasDiscriminator().HasValue("Administrator");
-                });
-
-            modelBuilder.Entity("ASP.NET_Core_Login.Models.Client", b =>
-                {
-                    b.HasBaseType("ASP.NET_Core_Login.Models.Users");
-
-                    b.ToTable("Users", (string)null);
-
-                    b.HasDiscriminator().HasValue("Client");
-                });
-
-            modelBuilder.Entity("ASP.NET_Core_Login.Models.Visitor", b =>
-                {
-                    b.HasBaseType("ASP.NET_Core_Login.Models.Users");
-
-                    b.ToTable("Users", (string)null);
-
-                    b.HasDiscriminator().HasValue("Visitor");
                 });
 #pragma warning restore 612, 618
         }
