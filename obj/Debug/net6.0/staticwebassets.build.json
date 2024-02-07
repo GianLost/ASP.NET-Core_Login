@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8hgmJSKlcesVDMqa65WPa3Hr8Injwz3sxLPvOjmODGA=",
+  "Hash": "vF5nkJnKHrJ3rc1r9Q4IkuDo0Ii+23z0mNNGiHKdlEU=",
   "Source": "ASP.NET Core_Login",
   "BasePath": "_content/ASP.NET Core_Login",
   "Mode": "Default",
@@ -85,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\css\\user\\register.css",
+      "SourceId": "ASP.NET Core_Login",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
+      "BasePath": "_content/ASP.NET Core_Login",
+      "RelativePath": "css/user/register.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\user\\register.css"
+    },
+    {
       "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\favicon.ico",
       "SourceId": "ASP.NET Core_Login",
       "SourceType": "Discovered",
@@ -119,12 +136,12 @@
       "OriginalItemSpec": "wwwroot\\images\\bg-5.jpg"
     },
     {
-      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\Animation\\door.js",
+      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\animation\\door.js",
       "SourceId": "ASP.NET Core_Login",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
       "BasePath": "_content/ASP.NET Core_Login",
-      "RelativePath": "js/Animation/door.js",
+      "RelativePath": "js/animation/door.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,15 +150,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Animation\\door.js"
+      "OriginalItemSpec": "wwwroot\\js\\animation\\door.js"
     },
     {
-      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\Animation\\togglePasswordVisibility.js",
+      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\animation\\togglePasswordVisibility.js",
       "SourceId": "ASP.NET Core_Login",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
       "BasePath": "_content/ASP.NET Core_Login",
-      "RelativePath": "js/Animation/togglePasswordVisibility.js",
+      "RelativePath": "js/animation/togglePasswordVisibility.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -150,15 +167,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Animation\\togglePasswordVisibility.js"
+      "OriginalItemSpec": "wwwroot\\js\\animation\\togglePasswordVisibility.js"
     },
     {
-      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\Constants\\constantsComponent.js",
+      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\constants\\constantsComponent.js",
       "SourceId": "ASP.NET Core_Login",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
       "BasePath": "_content/ASP.NET Core_Login",
-      "RelativePath": "js/Constants/constantsComponent.js",
+      "RelativePath": "js/constants/constantsComponent.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,7 +184,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\Constants\\constantsComponent.js"
+      "OriginalItemSpec": "wwwroot\\js\\constants\\constantsComponent.js"
     },
     {
       "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\site.js",
@@ -185,6 +202,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\js\\validation\\fields-validation.js",
+      "SourceId": "ASP.NET Core_Login",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\",
+      "BasePath": "_content/ASP.NET Core_Login",
+      "RelativePath": "js/validation/fields-validation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\validation\\fields-validation.js"
     },
     {
       "Identity": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.svg",

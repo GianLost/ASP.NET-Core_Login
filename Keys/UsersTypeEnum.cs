@@ -1,7 +1,7 @@
 namespace ASP.NET_Core_Login.Keys;
 public enum UsersTypeEnum
 {
-    ADMINISTRATOR,
-    COMMON, 
-    VISITOR
+    ADMINISTRATOR = 1,
+    CLIENT = 2, 
+    VISITOR = 0
 }

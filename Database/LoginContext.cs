@@ -10,7 +10,7 @@ public class LoginContext : DbContext
 
     }
 
-    public DbSet<Users>? Users => Set<Users>();
+    public DbSet<Users> Users => Set<Users>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

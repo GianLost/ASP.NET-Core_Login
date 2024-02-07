@@ -1,4 +1,4 @@
-// Arquivo responsável por conter todas as declarações de elementos para utilização das funções de anomação;
+// Arquivo responsável por conter todas as declarações de elementos para utilização das funções de animação;
 
 // Elementos para a página de login;
 export const loginPasswordInput = $("#login-password");

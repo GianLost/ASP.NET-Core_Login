@@ -1,4 +1,5 @@
 @using ASP.NET_Core_Login.Models;
+@using ASP.NET_Core_Login.Keys;
 
 @model Users
 
@@ -12,7 +13,7 @@
         <h1><i class="bi bi-person-circle me-4"></i>Cadastro de usuário</h1>
     </div>
 
-    <form class="row" asp-controller="" asp-action="" method="post">
+    <form class="row" asp-controller="Users" asp-action="Register" method="post">
 
         @*await Html.PartialAsync("../Shared/Components/Alerts/_Alerts.cshtml")*@
 
@@ -35,7 +36,7 @@
 
             <div class="form-group">
                 <label class="form-label" for="user-cellphone" hidden></label>
-                <input type="tel" class="form-control" id="user-cellphone" name="phone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel">
+                <input type="text" class="form-control" id="user-cellphone" name="cellphone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel">
             </div>
 
         </div>
@@ -66,11 +67,11 @@
 
         <div class="col-md-12">
             <label class="form-label" for="userType" hidden></label>
-            <select class="form-control" name="user-type" id="userType" asp-for="UserType">
-                <option value="">-- selecione o nível do usuário --</option>
-                <option value="1">Administrador</option>
-                <option value="2">Cliente</option>
-                <option value="0">Visitante</option>
+            <select class="form-control" name="usertype" id="userType" asp-for="UserType">
+                <option value="" selected>-- selecione o nível do usuário --</option>
+                <option value="@UsersTypeEnum.ADMINISTRATOR">Administrador</option>
+                <option value="@UsersTypeEnum.CLIENT">Cliente</option>
+                <option value="@UsersTypeEnum.VISITOR">Visitante</option>
             </select>
         </div>
 

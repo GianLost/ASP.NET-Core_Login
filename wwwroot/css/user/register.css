@@ -1,0 +1,43 @@
+@import url('./color/file-colors.css');
+
+#user-register-container {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 6rem auto;
+}
+
+.person {
+    width: 100%;
+}
+
+.person h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.person i {
+    font-size: 3rem;
+}
+
+#user-register-container form {
+    height: 70%;
+}
+
+#user-register-container .form-group {
+    margin: 1.8rem auto;
+}
+
+.btn-user-register {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 600px) {
+    .btn-user-register button {
+        margin-top: 2vh;
+    }
+}

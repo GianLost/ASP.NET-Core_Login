@@ -1,12 +1,30 @@
+using ASP.NET_Core_Login.Database;
 using ASP.NET_Core_Login.Models;
+using ASP.NET_Core_Login.Keys;
 
 namespace ASP.NET_Core_Login.Services;
 
 public class UserServices : IUserServices
 {
-    public Task<Users> UserRegister(Users user)
+    private readonly LoginContext _database;
+
+    public UserServices(LoginContext database)
     {
-        throw new NotImplementedException();
+        _database = database;
+    }
+
+    public async Task<Users> UserRegister(Users user)
+    {
+        if (user == null) throw new ArgumentNullException(nameof(user));
+
+        user.SessionToken = $"TOKEN DE SESSÃO {user.Password}";
+        user.UserStats = UsersStatsEnum.ENABLE;
+        user.RegisterDate = DateTime.Now;
+
+        await _database.Users.AddAsync(user);
+        await _database.SaveChangesAsync();
+
+        return user;
     }
 
     public Task<ICollection<Users>> UserList()

@@ -91,42 +91,6 @@ button.accept-policy {
   background-color: var(--navbar-color);
 }
 
-#user-register-container {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;  
-  margin: 6rem auto;
-}
-
-.person {
-  width: 100%;
-}
-
-.person h1{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.person i{
-  font-size: 3rem;
-}
-
-#user-register-container form {
-  height: 70%;
-}
-
-#user-register-container .form-group {
-  margin: 1.8rem auto;
-}
-
-.btn-user-register {
-  display: flex;
-  align-items: center;
-}
-
 @media (min-width: 600px), (max-width: 1800px) {
   html {
     font-size: 0.8em;
@@ -136,9 +100,5 @@ button.accept-policy {
 @media (max-width: 600px) {
   .footer {
     bottom: -15rem;
-  }
-
-  .btn-user-register button{
-    margin-top: 2vh;
   }
 }

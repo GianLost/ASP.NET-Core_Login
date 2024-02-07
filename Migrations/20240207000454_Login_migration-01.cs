@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ASP.NET_Core_Login.Migrations
 {
-    public partial class Login_Migration01 : Migration
+    public partial class Login_migration01 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
