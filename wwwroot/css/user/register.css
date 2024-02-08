@@ -1,4 +1,4 @@
-@import url('./color/file-colors.css');
+@import url('../color/file-colors.css');
 
 #user-register-container {
     height: 80vh;
@@ -27,7 +27,7 @@
     height: 70%;
 }
 
-#user-register-container .form-group {
+#user-register-container .form-group, .input-group {
     margin: 1.8rem auto;
 }
 

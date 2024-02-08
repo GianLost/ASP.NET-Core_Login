@@ -1,4 +1,6 @@
 ﻿import { loginPasswordInput, loginTogglePasswordButton, loginPasswordIcon } from "../Constants/constantsComponent.js";
+import { userPasswordInput, userTogglePasswordButton, userPasswordIcon } from "../Constants/constantsComponent.js";
+import { userConfPasswordInput, userConfTogglePasswordButton, userConfPasswordIcon } from "../Constants/constantsComponent.js";
 
 /**
  * "function togglePasswordVisibility()" é a função responsável por alterar a visibilidade dos campos de senha nos formulários em que é aplicada.
@@ -34,4 +36,6 @@ function togglePasswordVisibility(passwordInput, toggleButton, passwordIcon) {
 $(document).ready(function () {
     // Ativa a funcionalidade de alternância de visibilidade da senha
     togglePasswordVisibility(loginPasswordInput, loginTogglePasswordButton, loginPasswordIcon);
+    togglePasswordVisibility(userPasswordInput, userTogglePasswordButton, userPasswordIcon);
+    togglePasswordVisibility(userConfPasswordInput, userConfTogglePasswordButton, userConfPasswordIcon);
 });

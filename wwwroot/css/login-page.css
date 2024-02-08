@@ -39,29 +39,9 @@
   flex-direction: column;
 }
 
-#login-form .form-control:focus {
-  border-color: var(--light-color);
-  outline: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 #login-form .input-group {
   margin: 3rem auto 1rem auto;
   width: 33rem;
-}
-
-#login-form input {
-  border: none;
-  background-color: var(--light-color);
-  color: var(--dark-color);
-}
-
-.input-group-text {
-  background-color: var(--light-color);
-  color: var(--dark-color);
-  cursor: pointer;
-  border: none;
 }
 
 #login-btn {
@@ -80,8 +60,4 @@
   border-radius: 2vh;
   transition: ease-in-out var(--button-hover-transition-speed);
   box-shadow: 0.5px 0.5px 4px var(--light-box-shadow);
-}
-
-#toggle-password:hover {
-  color: var(--purple-color);
 }

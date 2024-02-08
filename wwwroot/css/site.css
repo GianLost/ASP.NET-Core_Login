@@ -91,6 +91,31 @@ button.accept-policy {
   background-color: var(--navbar-color);
 }
 
+form .form-control:focus {
+  border-color: var(--light-color);
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.pass input,
+.input-group-text{
+  border-color: var(--light-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.pass a:hover {
+  color: var(--purple-color);
+}
+
+.input-group-text {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  cursor: pointer;
+  border: none;
+}
+
 @media (min-width: 600px), (max-width: 1800px) {
   html {
     font-size: 0.8em;
