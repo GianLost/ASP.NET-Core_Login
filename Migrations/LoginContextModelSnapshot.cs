@@ -66,9 +66,7 @@ namespace ASP.NET_Core_Login.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("SessionToken")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("UserStats")
                         .HasColumnType("int");

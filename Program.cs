@@ -2,6 +2,8 @@ using ASP.NET_Core_Login.Database;
 using ASP.NET_Core_Login.Services;
 using ASP.NET_Core_Login.Helper.Messages;
 using Microsoft.EntityFrameworkCore;
+using ASP.NET_Core_Login.Helper.Validation;
+using ASP.NET_Core_Login.Helper.Authentication;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +31,9 @@ builder.Services.AddDbContext<LoginContext>(options => {
     options.UseMySql(connectionString, serverVersion);
 });
 
+builder.Services.AddScoped<ICryptography, Cryptography>();
+
+builder.Services.AddScoped<IUserValidation, UserValidation>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 
 // Add services to the container.

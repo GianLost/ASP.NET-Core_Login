@@ -43,9 +43,7 @@ public class Users
     [MinLength(3, ErrorMessage = "O cargo não pode conter menos de 3 caractéres.")]
     public string? Position { get; set; }
 
-    [Required(ErrorMessage = "O token de sessão é obrigatório!")]
-    [StringLength(150), MaxLength(150, ErrorMessage = "O token não pode conter mais de 35 caractéres.")]
-    [MinLength(3, ErrorMessage = "O token não pode conter menos de 3 caractéres.")]
+    [ScaffoldColumn(false)]
     public string? SessionToken { get; set; }
 
     [Required(ErrorMessage = "informe uma data de registro !")]
@@ -61,7 +59,7 @@ public class Users
     public string? LastModifiedBy { get; set; }
 
     [Required(ErrorMessage = "Informe o tipo de usuário !")]
-    public UsersTypeEnum UserType { get; set; }
+    public UsersTypeEnum? UserType { get; set; }
 
     [Required(ErrorMessage = "Informe o status do usuário !")]
     public UsersStatsEnum UserStats { get; set; }

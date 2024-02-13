@@ -1,5 +1,6 @@
 @using ASP.NET_Core_Login.Models;
 @using ASP.NET_Core_Login.Keys;
+@using ASP.NET_Core_Login.Helper.Validation;
 
 @model Users
 
@@ -13,73 +14,126 @@
         <h1><i class="bi bi-person-circle me-4"></i>Cadastro de usuário</h1>
     </div>
 
-    <form class="row" asp-controller="Users" asp-action="Register" method="post">
+    <form class="row needs-validation" asp-controller="Users" asp-action="Register" method="post" novalidate>
 
         @*await Html.PartialAsync("../Shared/Components/Alerts/_Alerts.cshtml")*@
 
         <div class="col-md-6">
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-name" hidden></label>
-                <input type="text" class="form-control" id="user-name" name="Name" placeholder="Nome completo" maxlength="50" minlength="10" asp-for="Name" autocomplete="name">
+                <input type="text" class='form-control @Html.GetErrorClassFor("Name")' id="user-name" name="Name"
+                    placeholder="Nome completo" maxlength="50" minlength="10" asp-for="Name" autocomplete="name"
+                    required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="Name"></span>
+                </div>
             </div>
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-login" hidden></label>
-                <input type="text" class="form-control" id="user-login" name="login" placeholder="Nome de login" maxlength="35" minlength="10" asp-for="Login" autocomplete="username">
+                <input type="text" class='form-control @Html.GetErrorClassFor("Login")' id="user-login" name="login"
+                    placeholder="Nome de login" maxlength="35" minlength="10" asp-for="Login" autocomplete="username"
+                    required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="Login"></span>
+                </div>
             </div>
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-email" hidden></label>
-                <input type="text" class="form-control" id="user-email" name="email" placeholder="Informe seu e-mail" asp-for="Email" autocomplete="email">
+                <input type="text" class='form-control @Html.GetErrorClassFor("Email")' id="user-email" name="email"
+                    placeholder="Informe seu e-mail" asp-for="Email" autocomplete="email" required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="Email"></span>
+                </div>
             </div>
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-cellphone" hidden></label>
-                <input type="text" class="form-control" id="user-cellphone" name="cellphone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel">
+                <input type="text" class='form-control @Html.GetErrorClassFor("CellPhone")' id="user-cellphone"
+                    name="cellphone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel" required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="CellPhone"></span>
+                </div>
             </div>
 
         </div>
 
-        <div class="col-md-6">
+        <div class="col-md-6 passwords">
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-workplace" hidden></label>
-                <input type="text" class="form-control" id="user-workplace" name="workplace" placeholder="Local de trabalho" asp-for="Workplace" autocomplete="organization">
+                <input type="text" class='form-control @Html.GetErrorClassFor("Workplace")' id="user-workplace"
+                    name="workplace" placeholder="Local de trabalho" asp-for="Workplace" autocomplete="organization"
+                    required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="Workplace"></span>
+                </div>
             </div>
 
-            <div class="input-group">
+            <div class="form-group position-relative">
                 <label for="user-Position" hidden></label>
-                <input type="text" class="form-control" id="user-Position" name="Position" placeholder="Seu cargo" maxlength="35" minlength="9" asp-for="Position" autocomplete="organization-title">
+                <input type="text" class='form-control @Html.GetErrorClassFor("Position")' id="user-Position"
+                    name="Position" placeholder="Seu cargo" maxlength="35" minlength="9" asp-for="Position"
+                    autocomplete="organization-title" required>
+                <div class="invalid-tooltip">
+                    <span asp-validation-for="Position"></span>
+                </div>
             </div>
 
-            <div class="input-group pass">
-                <label for="user-Password" hidden></label>
-                <input type="password" class="form-control" id="user-Password" name="password" placeholder="Informe uma senha" maxlength="100" asp-for="Password" autocomplete="new-password">
-                <a title="Exibir Senha" class="input-group-text" id="user-toggle-password"><i title="Exibir Senha" id="user-password-icon" class="bi bi-eye-slash-fill"></i></a>
+            <div class="form-group password-field">
+                <div class="input-group pass">
+                    <label for="user-password" hidden></label>
+                    <input type="password" class='form-control @Html.GetErrorClassFor("Password")' id="user-password"
+                        name="password" placeholder="Informe uma senha" maxlength="100" asp-for="Password"
+                        autocomplete="new-password" required>
+                    <a title="Exibir Senha" class="input-group-text" id="user-toggle-password"><i title="Exibir Senha"
+                            id="user-password-icon" class="bi bi-eye-slash-fill"></i></a>
+                    <div class="invalid-tooltip">
+                        <span asp-validation-for="Password"></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="input-group pass">
-                <label for="user-confPass" hidden></label>
-                <input type="password" class="form-control" id="user-confPass" name="confirmPass" placeholder="Confirme sua senha" maxlength="100" autocomplete="new-password">
-                <a title="Exibir Senha" class="input-group-text" id="user-toggle-confpassword"><i title="Exibir Senha" id="user-confpassword-icon" class="bi bi-eye-slash-fill"></i></a>
+            <div class="form-group password-field">
+                <div class="input-group pass">
+                    <label for="user-confPass" hidden></label>
+                    <input type="password"
+                        class='form-control br-pass @Html.GetErrorClassFor("confirmPass") @Html.GetConfirmationErrorClass()'
+                        id="user-confPass" name="confirmPass" placeholder="Confirme sua senha" maxlength="100"
+                        autocomplete="new-password" required>
+                    <a title="Exibir Senha" class="input-group-text inv-br-pass" id="user-toggle-confpassword"><i
+                            title="Exibir Senha" id="user-confpassword-icon" class="bi bi-eye-slash-fill"></i></a>
+                    <div class="invalid-tooltip">
+                        <!-- Aqui você pode exibir mensagens de erro específicas, se necessário -->
+                        @TempData["ErrorPass"]
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12 position-relative mb-3">
             <label class="form-label" for="userType" hidden></label>
-            <select class="form-control" name="usertype" id="userType" asp-for="UserType">
+            <select class='form-select @Html.GetErrorClassFor("UserType")' name="usertype" id="userType"
+                asp-for="UserType" required>
                 <option value="" selected>-- selecione o nível do usuário --</option>
                 <option value="@UsersTypeEnum.ADMINISTRATOR">Administrador</option>
                 <option value="@UsersTypeEnum.CLIENT">Cliente</option>
                 <option value="@UsersTypeEnum.VISITOR">Visitante</option>
             </select>
+            <div class="invalid-tooltip">
+                <span asp-validation-for="UserType"></span>
+            </div>
         </div>
 
-        <div class="btn-user-register">
-            <button title="Cadastrar usuário ..." type="submit" class="btn btn-primary me-3"><i class="bi bi-person-add" title="Cadastrar usuário ..."></i> Salvar</button>
-            <button asp-controller="" asp-action="" type="submit" class="btn btn-secondary" title="Cancelar cadastro ..."><i class="bi bi-arrow-return-left" title="Cancelar cadastro ..."></i></button>
+        <div class="btn-user-register mt-4">
+            <button title="Cadastrar usuário ..." type="submit" class="btn btn-primary me-3"><i class="bi bi-person-add"
+                    title="Cadastrar usuário ..."></i> Salvar</button>
+            <button asp-controller="" asp-action="" type="submit" class="btn btn-secondary"
+                title="Cancelar cadastro ..."><i class="bi bi-arrow-return-left"
+                    title="Cancelar cadastro ..."></i></button>
         </div>
 
     </form>

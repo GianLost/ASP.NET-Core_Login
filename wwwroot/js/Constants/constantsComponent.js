@@ -10,7 +10,7 @@ export const iconLogin = $("#login-btn");
 export const iconLogout = $("#close-link");
 
 // Elementos para a página de registro de usuários
-export const userPasswordInput = $("#user-Password");
+export const userPasswordInput = $("#user-password");
 export const userTogglePasswordButton = $("#user-toggle-password");
 export const userPasswordIcon = $("#user-password-icon");
 

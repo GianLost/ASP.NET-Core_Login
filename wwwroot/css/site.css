@@ -98,6 +98,8 @@ form .form-control:focus {
   box-shadow: none;
 }
 
+
+
 .pass input,
 .input-group-text{
   border-color: var(--light-color);
@@ -107,6 +109,13 @@ form .form-control:focus {
 
 .pass a:hover {
   color: var(--purple-color);
+}
+
+.password-field .input-group,
+.password-field label,
+.password-field input,
+.password-field a{
+  margin: 0%;
 }
 
 .input-group-text {

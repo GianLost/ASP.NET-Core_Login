@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ASP.NET_Core_Login.Migrations
 {
     [DbContext(typeof(LoginContext))]
-    [Migration("20240207000454_Login_migration-01")]
-    partial class Login_migration01
+    [Migration("20240213032719_Login_Migration-01")]
+    partial class Login_Migration01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -68,9 +68,7 @@ namespace ASP.NET_Core_Login.Migrations
                         .HasColumnType("datetime(6)");
 
                     b.Property<string>("SessionToken")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("varchar(150)");
+                        .HasColumnType("varchar(255)");
 
                     b.Property<int>("UserStats")
                         .HasColumnType("int");

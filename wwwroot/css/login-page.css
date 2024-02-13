@@ -34,29 +34,30 @@
   color: var(--purple-color);
 }
 
+.login-card .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20rem;
+}
+
 #login-form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 #login-form .input-group {
-  margin: 3rem auto 1rem auto;
   width: 33rem;
 }
 
-#login-btn {
+#login-form button {
   width: 16rem;
 }
 
-#login-btn-container {
-  margin: 3rem auto;
-}
-
-#login-btn-container p {
-  margin: 3rem -1rem;
-}
-
-#login-btn-container button:hover {
+#login-form button:hover {
   border-radius: 2vh;
   transition: ease-in-out var(--button-hover-transition-speed);
   box-shadow: 0.5px 0.5px 4px var(--light-box-shadow);

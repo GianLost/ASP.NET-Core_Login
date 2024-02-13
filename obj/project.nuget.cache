@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hRU0Wh2G8YBD3x82oZmXIAoH7yC5nUM1LP6e8aIMm/WYJgIcytTYF/HxghtDLUNmNgCLRpRO2ULsQxwp/BqY7Q==",
+  "dgSpecHash": "jNGFPIjmW1gQeItnn/Bdq56bD7ZAs58wERFNNeLcwTEtKt+tNvtOcGPUl5j7hxkrRiReaXNPNRyycLyiwMic+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Administrador\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\Administrador\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.0\\microsoft.entityframeworkcore.abstractions.6.0.0.nupkg.sha512",

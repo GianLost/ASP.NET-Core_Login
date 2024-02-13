@@ -94,6 +94,7 @@ C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\ASP.NET Core_
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\ASP.NET Core_Login.runtimeconfig.json
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\ASP.NET Core_Login.dll
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\ASP.NET Core_Login.pdb
+C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\Humanizer.dll
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Administrador\Desktop\ASP.NET-Core_Login\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
