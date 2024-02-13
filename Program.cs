@@ -1,9 +1,10 @@
+using Microsoft.EntityFrameworkCore;
 using ASP.NET_Core_Login.Database;
 using ASP.NET_Core_Login.Services;
 using ASP.NET_Core_Login.Helper.Messages;
-using Microsoft.EntityFrameworkCore;
 using ASP.NET_Core_Login.Helper.Validation;
 using ASP.NET_Core_Login.Helper.Authentication;
+using ASP.NET_Core_Login.Helper.Authentication.Session;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,19 +23,20 @@ builder.Services.AddSession(x =>
 
 builder.Services.AddMvc();
 
-builder.Services.AddDbContext<LoginContext>(options => {
-
+builder.Services.AddDbContext<LoginContext>(options =>
+{
     string? connectionString = Environment.GetEnvironmentVariable("SIS_LOGIN_CONNECTION_STRING") ?? throw new InvalidOperationException(FeedbackMessages.ErrorConnectionString);
 
     ServerVersion serverVersion = ServerVersion.AutoDetect(connectionString);
-    
+
     options.UseMySql(connectionString, serverVersion);
 });
 
-builder.Services.AddScoped<ICryptography, Cryptography>();
-
+builder.Services.AddScoped<IUserSession, UserSession>();
 builder.Services.AddScoped<IUserValidation, UserValidation>();
 builder.Services.AddScoped<IUserServices, UserServices>();
+
+builder.Services.AddScoped<ICryptography, Cryptography>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -61,8 +63,6 @@ app.UseAuthorization();
 
 app.UseSession();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Login}/{action=Index}/{id?}");
+app.MapControllerRoute(name: "default", pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();
