@@ -31,4 +31,6 @@ public interface IUserValidation
     /// <param name="controller">Controlador que pode ser usado para fornecer feedback ao usuário.</param>
     /// <returns>True se as senhas corresponderem, False caso contrário.</returns>
     bool ValidatePassword(string pass, string confirmPass, Controller controller);
+
+    void LoginFieldsValidation(string fields, string errorMessage, Controller controller);
 }

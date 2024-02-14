@@ -47,7 +47,7 @@ public class UsersController : Controller
                     return View(user);
 
             TempData["SuccessMessage"] = FeedbackMessages.SuccessUserRegister;
-
+            
             await _userServices.UserRegister(user);
             return RedirectToAction("Index", "Home");
         }

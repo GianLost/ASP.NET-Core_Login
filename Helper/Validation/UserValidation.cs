@@ -70,4 +70,10 @@ public class UserValidation : IUserValidation
 
         return passwordsMatch;
     }
+
+    public void LoginFieldsValidation(string fields, string errorMessage, Controller controller)
+    {
+        controller.TempData[fields] = errorMessage;
+    }
+    
 }

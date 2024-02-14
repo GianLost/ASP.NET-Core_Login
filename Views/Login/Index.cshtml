@@ -1,3 +1,7 @@
+@using ASP.NET_Core_Login.Models;
+
+@model Login;
+
 @{
     Layout = "_LayoutLogin";
     ViewData["Title"] = "Login";
@@ -21,18 +25,18 @@
             </div>
         }
 
-        <form id="login-form" method="post">
+        <form id="login-form" asp-controller="Login" asp-action="SignIn" method="post">
 
             <div class="input-group">
                 <span class="input-group-text bg-dark text-light"><i class="bi bi-person-circle"></i></span>
                 <label for="login-name" hidden>Login:</label>
-                <input class="form-control form-control-lg" id="login-name" placeholder="Nome de usuário ..." autocomplete="username">
+                <input class="form-control form-control-lg" id="login-name" placeholder="Nome de usuário ..." asp-for="UserName" autocomplete="username">
             </div>
 
             <div class="input-group pass">
                 <span class="input-group-text bg-dark text-light"><i class="bi bi-lock-fill"></i></span>
                 <label for="login-password" hidden>Senha:</label>
-                <input type="password" id="login-password" class="form-control form-control-lg" placeholder="Insira sua senha ..." autocomplete="current-password">
+                <input type="password" id="login-password" class="form-control form-control-lg" placeholder="Insira sua senha ..." asp-for="Password" autocomplete="current-password">
                 <a title="Exibir Senha" class="input-group-text" id="toggle-password"><i title="Exibir Senha" id="password-icon" class="bi bi-eye-slash-fill"></i></a>
             </div>
 

@@ -11,6 +11,7 @@ public class LoginContext : DbContext
     }
 
     public DbSet<Users> Users => Set<Users>();
+    public DbSet<TokenSession> Tokens => Set<TokenSession>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -21,6 +22,10 @@ public class LoginContext : DbContext
         modelBuilder.Entity<Users>().HasIndex(u => u.CellPhone).IsUnique();
         modelBuilder.Entity<Users>().HasIndex(u => u.Password).IsUnique();
         modelBuilder.Entity<Users>().HasIndex(u => u.SessionToken).IsUnique();
+
+        modelBuilder.Entity<TokenSession>().HasIndex(u => u.Id).IsUnique();
+        modelBuilder.Entity<TokenSession>().HasIndex(u => u.SessionToken).IsUnique();
+        modelBuilder.Entity<TokenSession>().HasIndex(u => u.UserId).IsUnique();
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(LoginContext).Assembly);
     }

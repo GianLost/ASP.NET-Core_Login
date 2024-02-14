@@ -17,10 +17,8 @@ public class SessionTokenGenerator
 
         // Utiliza "RNGCryptoServiceProvider" paga gerar bytes aleátorios
         using (var rng = RandomNumberGenerator.Create())
-        {
             rng.GetBytes(randomBytes);
-        }
-
+        
         // Converte os bytes aleatórios em uma string Base64
         return Convert.ToBase64String(randomBytes);
     }

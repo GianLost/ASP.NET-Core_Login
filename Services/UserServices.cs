@@ -2,6 +2,7 @@ using ASP.NET_Core_Login.Database;
 using ASP.NET_Core_Login.Models;
 using ASP.NET_Core_Login.Keys;
 using ASP.NET_Core_Login.Helper.Authentication;
+using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NET_Core_Login.Services;
 
@@ -39,14 +40,13 @@ public class UserServices : IUserServices
     {
         throw new NotImplementedException();
     }
-
     public void UserDelete(int id)
     {
         throw new NotImplementedException();
     }
-
     public Users SearchForId(int id)
     {
         throw new NotImplementedException();
     }
+
 }

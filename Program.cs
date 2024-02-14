@@ -32,6 +32,8 @@ builder.Services.AddDbContext<LoginContext>(options =>
     options.UseMySql(connectionString, serverVersion);
 });
 
+builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 builder.Services.AddScoped<IUserSession, UserSession>();
 builder.Services.AddScoped<IUserValidation, UserValidation>();
 builder.Services.AddScoped<IUserServices, UserServices>();
@@ -63,6 +65,8 @@ app.UseAuthorization();
 
 app.UseSession();
 
-app.MapControllerRoute(name: "default", pattern: "{controller=Login}/{action=Index}/{id?}");
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 
 app.Run();
