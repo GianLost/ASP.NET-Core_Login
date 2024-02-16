@@ -6,7 +6,7 @@ public interface IUserSession
 {
     void UserCheckIn(Users users);
     void UserCheckOut();
-    Task<bool> ValidateTokenAsync(Users users);
+    bool ValidateToken(string token, string hashedToken);
     Task<Users?> GetSessionAsync();
     Task<Users?> SignInAsync(string login);
 }

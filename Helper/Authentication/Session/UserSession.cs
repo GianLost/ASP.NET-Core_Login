@@ -9,27 +9,14 @@ namespace ASP.NET_Core_Login.Helper.Authentication.Session;
 public class UserSession : IUserSession
 {
     private readonly LoginContext _database;
+    private readonly ICryptography _cryptography;
     private readonly IHttpContextAccessor _httpContext;
 
-    public UserSession(IHttpContextAccessor httpContext, LoginContext database)
+    public UserSession(IHttpContextAccessor httpContext, LoginContext database, ICryptography cryptography)
     {
         _httpContext = httpContext;
         _database = database;
-    }
-
-    public async Task<bool> ValidateTokenAsync(Users user)
-    {
-        if (user == null || string.IsNullOrEmpty(user.Login))
-            return false;
-
-        Users? searchUser = await _database.Users.FirstOrDefaultAsync(x => x.Login != null && x.Login.ToUpper() == user.Login.ToUpper());
-
-        string? sessionToken = user.SessionToken;
-
-        if (user != null && user.SessionToken == sessionToken)
-            return true;
-        
-        return false;
+        _cryptography = cryptography;
     }
 
     public async Task<Users?> GetSessionAsync()
@@ -48,22 +35,27 @@ public class UserSession : IUserSession
 
     public void UserCheckIn(Users user)
     {
-        if (user.Login == null || string.IsNullOrEmpty(user.SessionToken)) throw new ArgumentNullException(nameof(user));
+        if (user == null || string.IsNullOrEmpty(user.SessionToken)) throw new ArgumentNullException(nameof(user));
 
-        if (ValidateTokenAsync(user).Result)
-        {
-            string value = JsonSerializer.Serialize(user);
+        TokenSession? tokenSession = _database.Tokens.FirstOrDefault(x => x.UserId == user.Id);
 
-            _httpContext?.HttpContext?.Session.SetString("userCheckIn", value);
+        if(string.IsNullOrEmpty(tokenSession?.SessionToken)) throw new ArgumentNullException(nameof(user));
 
-            if (user.UserType != null)
-                _httpContext?.HttpContext?.Session.SetInt32("userType", Convert.ToInt32(user.UserType));
-                _httpContext?.HttpContext?.Session.SetInt32("userStats", Convert.ToInt32(user.UserStats)); 
-        }
-        else
-        {
-            throw new InvalidOperationException("Invalid session token");
-        }
+        if (!ValidateToken(tokenSession.SessionToken, user.SessionToken)) throw new InvalidOperationException("Invalid session token");
+
+        string value = JsonSerializer.Serialize(user);
+
+        _httpContext?.HttpContext?.Session.SetString("userCheckIn", value);
+
+        if (user.UserType != null)
+            _httpContext?.HttpContext?.Session.SetInt32("userType", Convert.ToInt32(user.UserType));
+            _httpContext?.HttpContext?.Session.SetInt32("userStats", Convert.ToInt32(user.UserStats)); 
+    }
+
+    public bool ValidateToken(string token, string hashedToken)
+    {
+        bool validateToken = _cryptography.VerifyKeyEncrypted(token, hashedToken);
+        return validateToken;
     }
 
     public async Task<Users?> SignInAsync(string login)

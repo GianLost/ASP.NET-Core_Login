@@ -1,3 +1,4 @@
+using ASP.NET_Core_Login.Filters;
 using ASP.NET_Core_Login.Helper.Messages;
 using ASP.NET_Core_Login.Helper.Validation;
 using ASP.NET_Core_Login.Models;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ASP.NET_Core_Login.Controllers;
 
+[LoggedinUserFilter]
 public class UsersController : Controller
 {
     private readonly ILogger<UsersController> _logger;
