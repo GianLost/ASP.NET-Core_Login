@@ -2,7 +2,6 @@ using ASP.NET_Core_Login.Database;
 using ASP.NET_Core_Login.Models;
 using ASP.NET_Core_Login.Keys;
 using ASP.NET_Core_Login.Helper.Authentication;
-using Microsoft.EntityFrameworkCore;
 
 namespace ASP.NET_Core_Login.Services;
 
@@ -22,11 +21,29 @@ public class UserServices : IUserServices
         if (user == null) throw new ArgumentNullException(nameof(user));
 
         user.Password = _cryptography.EncryptKey(user.Password);
-        user.SessionToken = SessionTokenGenerator.GenerateSessionToken();
         user.UserStats = UsersStatsEnum.ENABLE;
         user.RegisterDate = DateTime.Now;
 
         await _database.Users.AddAsync(user);
+        await _database.SaveChangesAsync();
+
+        // Generate session token
+        string sessionToken = SessionTokenGenerator.GenerateSessionToken();
+
+        // Store session token in TokenSession table
+        TokenSession tokenSession = new()
+        {
+            SessionToken = sessionToken,
+            UserId = user.Id, // Assuming Id is auto-generated
+            RegisterDate = DateTime.Now
+        };
+
+        await _database.Tokens.AddAsync(tokenSession);
+        await _database.SaveChangesAsync();
+
+        // Store encrypted session token in Users table
+        user.SessionToken = _cryptography.EncryptKey(sessionToken);
+
         await _database.SaveChangesAsync();
 
         return user;

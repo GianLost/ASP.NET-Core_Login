@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin: 6rem auto;
+    justify-content: center;
 }
 
 .person {
@@ -23,13 +22,16 @@
     font-size: 3rem;
 }
 
-#user-register-container form {
-    height: 70%;
+#user-register-container form .col-md-6{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20rem;
 }
 
-#user-register-container .form-group,
-#user-register-container .input-group {
-    margin: 1.6rem auto;
+#usertype-register {
+    height: 2.5rem;
+    margin: 1rem auto;
 }
 
 .btn-user-register {

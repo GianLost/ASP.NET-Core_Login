@@ -75,6 +75,7 @@ public class UserSession : IUserSession
 
         return user; 
     }
+    
     public void UserCheckOut()
     {
         _httpContext?.HttpContext?.Session.Remove("userCheckIn");
