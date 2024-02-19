@@ -15,10 +15,13 @@ builder.Services.Configure<CookiePolicyOptions>(options =>
 });
 
 builder.Services.AddMemoryCache();
+
 builder.Services.AddSession(x =>
 {
+    x.Cookie.Name = "ASP.NET_Core_Login.Session";
     x.Cookie.HttpOnly = true;
     x.Cookie.IsEssential = true;
+    x.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
 builder.Services.AddMvc();

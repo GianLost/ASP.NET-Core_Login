@@ -30,9 +30,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0%;
+  padding: 0%;
   width: 100%;
-  height: 80vh;
-  margin-bottom: 2vh;
 }
 
 a.navbar-brand {
@@ -132,7 +132,5 @@ form .form-control:focus {
 }
 
 @media (max-width: 600px) {
-  .footer {
-    bottom: -15rem;
-  }
+  
 }

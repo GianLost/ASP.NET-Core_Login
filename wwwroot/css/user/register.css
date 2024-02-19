@@ -1,7 +1,6 @@
 @import url('../color/file-colors.css');
 
 #user-register-container {
-    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,11 +25,14 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 20rem;
+}
+
+#user-register-container form .col-md-6 .form-group {
+    width: 100%;
+    margin: 1rem auto;
 }
 
 #usertype-register {
-    height: 2.5rem;
     margin: 1rem auto;
 }
 
@@ -56,7 +58,21 @@
 }
 
 @media (max-width: 600px) {
-    .btn-user-register button {
-        margin-top: 2vh;
+
+    .person {
+        display: none;
     }
+
+    #user-register-container form {
+        padding: 4vh;
+    }
+    
+    #user-register-container form .col-md-6 .form-group {
+        margin: 1.5vh auto;
+    }
+
+    #usertype-register {
+        margin: 1.5vh auto;
+    }
+
 }

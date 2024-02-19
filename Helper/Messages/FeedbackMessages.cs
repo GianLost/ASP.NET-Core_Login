@@ -8,5 +8,5 @@ public static class FeedbackMessages
     public const string ConfirmPassword = "Confirme sua senha !";
     public const string UnMatchedPassords = "As senhas não são idênticas !";
     public const string ErrorAccountDisable = "O usuário fornecido está com o acesso desabilitado! Contate um administrador !";
-    public const string LogInDataNull = "Os dados informados não correspondem à um usário cadastrado !";
+    public const string LogInDataNull = "Os dados informados não correspondem à um usuário cadastrado !";
 }

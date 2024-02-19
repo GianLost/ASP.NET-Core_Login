@@ -8,13 +8,13 @@
     ViewData["Title"] = "Cadastro de usuário";
 }
 
-<div id="user-register-container" class="col-md-8">
+<div id="user-register-container" class="col-lg-8 col-md-8 col-sm-4">
 
     <div class="person">
         <h1><i class="bi bi-person-circle me-4"></i>Cadastro de usuário</h1>
     </div>
 
-    <form class="row needs-validation" asp-controller="Users" asp-action="Register" method="post" novalidate>
+    <form class="row needs-validation w-100" asp-controller="Users" asp-action="Register" method="post" novalidate>
 
         @*await Html.PartialAsync("../Shared/Components/Alerts/_Alerts.cshtml")*@
 
@@ -22,7 +22,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-name" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("Name")' id="user-name" name="Name"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("Name")' id="user-name" name="Name"
                     placeholder="Nome completo" maxlength="50" minlength="10" asp-for="Name" autocomplete="name"
                     required>
                 <div class="invalid-tooltip">
@@ -32,7 +32,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-login" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("Login")' id="user-login" name="login"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("Login")' id="user-login" name="login"
                     placeholder="Nome de login" maxlength="35" minlength="10" asp-for="Login" autocomplete="username"
                     required>
                 <div class="invalid-tooltip">
@@ -42,7 +42,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-email" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("Email")' id="user-email" name="email"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("Email")' id="user-email" name="email"
                     placeholder="Informe seu e-mail" asp-for="Email" autocomplete="email" required>
                 <div class="invalid-tooltip">
                     <span asp-validation-for="Email"></span>
@@ -51,7 +51,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-cellphone" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("CellPhone")' id="user-cellphone"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("CellPhone")' id="user-cellphone"
                     name="cellphone" placeholder="(XX) XXXXX-XXXX" asp-for="CellPhone" autocomplete="tel" required>
                 <div class="invalid-tooltip">
                     <span asp-validation-for="CellPhone"></span>
@@ -64,7 +64,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-workplace" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("Workplace")' id="user-workplace"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("Workplace")' id="user-workplace"
                     name="workplace" placeholder="Local de trabalho" asp-for="Workplace" autocomplete="organization"
                     required>
                 <div class="invalid-tooltip">
@@ -74,7 +74,7 @@
 
             <div class="form-group position-relative">
                 <label for="user-Position" hidden></label>
-                <input type="text" class='form-control @Html.GetErrorClassFor("Position")' id="user-Position"
+                <input type="text" class='form-control form-control-sm @Html.GetErrorClassFor("Position")' id="user-Position"
                     name="Position" placeholder="Seu cargo" maxlength="35" minlength="9" asp-for="Position"
                     autocomplete="organization-title" required>
                 <div class="invalid-tooltip">
@@ -83,7 +83,7 @@
             </div>
 
             <div class="form-group password-field">
-                <div class="input-group pass">
+                <div class="input-group input-group-sm pass">
                     <label for="user-password" hidden></label>
                     <input type="password" class='form-control @Html.GetErrorClassFor("Password")' id="user-password"
                         name="password" placeholder="Informe uma senha" maxlength="100" asp-for="Password"
@@ -97,7 +97,7 @@
             </div>
 
             <div class="form-group password-field">
-                <div class="input-group pass">
+                <div class="input-group input-group-sm pass">
                     <label for="user-confPass" hidden></label>
                     <input type="password"
                         class='form-control br-pass @Html.GetErrorClassFor("confirmPass") @Html.GetConfirmationErrorClass()'
@@ -116,7 +116,7 @@
 
         <div id="usertype-register" class="position-relative">
             <label class="form-label" for="userType" hidden></label>
-            <select class='form-select @Html.GetErrorClassFor("UserType")' name="usertype" id="userType"
+            <select class='form-select form-select-sm @Html.GetErrorClassFor("UserType")' name="usertype" id="userType"
                 asp-for="UserType" required>
                 <option value="" selected>-- selecione o nível do usuário --</option>
                 <option value="@UsersTypeEnum.ADMINISTRATOR">Administrador</option>

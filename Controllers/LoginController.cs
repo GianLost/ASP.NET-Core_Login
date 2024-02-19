@@ -25,7 +25,9 @@ public class LoginController : Controller
 
     public async Task<IActionResult> Index()
     {
-        if (await _session.GetSessionAsync() != null) return RedirectToAction("Index", "Home");
+        if (await _session.GetSessionAsync() != null) 
+            return RedirectToAction("Index", "Home");
+            
         return View();
     }
 
@@ -34,7 +36,6 @@ public class LoginController : Controller
     {
         if (ModelState.IsValid)
         {
-
             if(string.IsNullOrEmpty(login.UserName)) throw new ArgumentNullException(nameof(login));
                 Users? users = await _session.SignInAsync(login.UserName);
             
@@ -45,21 +46,19 @@ public class LoginController : Controller
                     _validation.LoginFieldsValidation("InvalidLogin", "O login informado é inválido", this);
                     return View("Index");
                 }
-
-                if (!_cryptography.VerifyKeyEncrypted(login.Password, users.Password))
+                else if (!_cryptography.VerifyKeyEncrypted(login.Password, users.Password))
                 {
                     _validation.LoginFieldsValidation("InvalidPass", "A senha informada é inválida", this);
                     return View("Index");
                 }
-
-                if (users.UserStats != UsersStatsEnum.ENABLE)
+                else if (users.UserStats != UsersStatsEnum.ENABLE)
                 {
                     TempData["ErrorMessage"] = FeedbackMessages.ErrorAccountDisable;
                     return View("Index");
                 }
                 else
                 {
-                    _session.UserCheckIn(users);
+                    await _session.UserCheckIn(users);
                     return RedirectToAction("Index", "Home");
                 }
             }
