@@ -81,6 +81,15 @@
     width: 100%;
 }
 
+#sessionTimer {
+    width: 8vh;
+    padding: 0.5vh;
+    border-radius: 0.5vh;
+    text-align: center;
+    color: #e5e5e5da;
+    background-color: var(--navlinks-color);
+}
+
 .dropdown li a:hover {
     background-color: var(--purple-color);
 }

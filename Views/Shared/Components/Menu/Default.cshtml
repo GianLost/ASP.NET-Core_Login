@@ -3,10 +3,10 @@
 
 <div class="container-fluid">
 
-    <span class="navbar-brand me-5">@Model.Login</span>
-
+    <div class="me-5" id="sessionTimer"></div>
     <div id="sessionTimeoutData" data-session-timeout='@Context.Session.GetString("sessionTimeout")'></div>
-    <div id="sessionTimer"></div>
+
+    <span class="navbar-brand">@Model.Login</span>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="bi bi-list navbar-toggler-icon"></i></button>
 
