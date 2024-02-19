@@ -1,0 +1,6 @@
+@using ASP.NET_Core_Login.Helper.Messages;
+@model string
+
+<script>
+    alert(FeedbackMessages.ExpiredSession), window.location.href = '@Model';
+</script>

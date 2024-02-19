@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj": {}
+    "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj": {
+    "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj",
+        "projectUniqueName": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj",
         "projectName": "ASP.NET Core_Login",
-        "projectPath": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj",
-        "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Desktop\\ASP.NET-Core_Login\\obj\\",
+        "projectPath": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\ASP.NET Core_Login.csproj",
+        "packagesPath": "C:\\Users\\gianluca.vialli\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gianluca.vialli\\Desktop\\ASP.NET-Core_Login\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gianluca.vialli\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,24 +64,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[6.0.26, 6.0.26]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -95,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.1.24101.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.413\\RuntimeIdentifierGraph.json"
         }
       }
     }

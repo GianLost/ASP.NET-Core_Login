@@ -1,0 +1,67 @@
+@using ASP.NET_Core_Login.Models;
+@model Users;
+
+<div class="container-fluid">
+
+    <span class="navbar-brand me-5">@Model.Login</span>
+
+    <div id="sessionTimeoutData" data-session-timeout='@Context.Session.GetString("sessionTimeout")'></div>
+    <div id="sessionTimer"></div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <i class="bi bi-list navbar-toggler-icon"></i></button>
+
+    <div class="navbar-collapse collapse">
+
+        <ul class="navbar-nav flex-grow-1">
+
+            <li class="nav-item"> <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"> <i class="bi bi-house-fill me-1"></i> Home</a> </li>
+
+            <li class="nav-item dropdown">
+
+                <a title="usuários ..." class="nav-link dropdown-toggle" id="menu-users" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i title="usuários ..." class="bi bi-person-fill-add"></i> Usuários</a>
+
+                <ul class="dropdown-menu" aria-labelledby="menu-users">
+
+                    <li> <a class="dropdown-item" asp-controller="Users" asp-action="Register">Administradores</a> </li>
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" asp-controller="" asp-action="">Clientes</a></li>
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" asp-controller="" asp-action="">Visitantes</a></li>
+
+                </ul>
+
+            </li>
+
+            <li class="nav-item dropdown">
+
+                <a title="usuários ..." class="nav-link dropdown-toggle" id="menu-structures" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i title="usuários ..." class="bi bi-building-fill"></i> Instituições</a>
+
+                <ul class="dropdown-menu" aria-labelledby="menu-structures">
+
+                    <li><a class="dropdown-item" asp-controller="" asp-action="">Cadastrar</a> </li>
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" asp-controller="" asp-action="">Editar</a> </li>
+                    <li><hr class="dropdown-divider"></li>
+
+                    <li><a class="dropdown-item" asp-controller="" asp-action="">Excluir</a></li>
+
+                </ul>
+
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"> <i class="bi bi-info-circle-fill me-1"></i> Sobre</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" id="close-link" asp-area="" asp-controller="Login" asp-action="Logout"> <i class="bi bi-door-closed-fill me-1"></i> Sair</a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>

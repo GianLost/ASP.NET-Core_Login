@@ -73,7 +73,8 @@ public class UserSession : IUserSession
         string value = JsonSerializer.Serialize(user);
 
         // Define o tempo limite da sessão
-        SetSessionTimeout(DateTime.Now.Add(SessionTimeoutDuration));
+        DateTime sessionTimeout = DateTime.Now.Add(SessionTimeoutDuration);
+        SetSessionTimeout(sessionTimeout); // Aqui você define o tempo limite da sessão na sessão
 
         _httpContext.HttpContext?.Session.SetString(SessionKey, value);
         _httpContext.HttpContext?.Session.SetInt32("userType", Convert.ToInt32(user.UserType));
@@ -107,6 +108,7 @@ public class UserSession : IUserSession
         
         return null;
     }
+    
     private void SetSessionTimeout(DateTime timeout)
     {
         _httpContext.HttpContext?.Session.SetString(SessionTimeoutKey, timeout.ToString("o"));

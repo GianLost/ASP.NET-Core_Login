@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ASP.NET Core_Login")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a472cb8b7c882a7d65a5d6d37f53ed5c73de9fe5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ASP.NET Core_Login")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ASP.NET Core_Login")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

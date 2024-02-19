@@ -68,6 +68,7 @@ public class LoginController : Controller
 
         return View("Index");
     }
+
     public IActionResult Logout()
     {
         _session.UserCheckOut();
